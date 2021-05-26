@@ -1,4 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
+using System.Collections.Generic;
 
 namespace NerdStore.Catologo.Domain
 {
@@ -7,6 +8,13 @@ namespace NerdStore.Catologo.Domain
         public string Nome { get; private set; }
         public int Codigo { get; private set; }
 
+        /// <summary>
+        /// EF Relation
+        /// </summary>
+        public ICollection<Produto> Produtos { get; set; }
+
+        protected Categoria() { }
+
         public Categoria(string nome, int codigo)
         {
             Nome = nome;
@@ -14,7 +22,7 @@ namespace NerdStore.Catologo.Domain
         }
 
         public override string ToString()
-        {  
+        {
             return $"{Nome} - {Codigo}";
         }
         public void Validar()
