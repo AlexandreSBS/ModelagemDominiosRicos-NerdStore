@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.WebApp.MVC", "src\NerdStore.WebApp.MVC\NerdStore.WebApp.MVC.csproj", "{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{DBB3967B-778D-490F-B233-FC0188AF68F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB3967B-778D-490F-B233-FC0188AF68F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB3967B-778D-490F-B233-FC0188AF68F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{9565741F-77D4-42BA-84C4-9DCFF3546EEC} = {C1D80B81-7ED4-414E-AA7B-FEF7C070F03E}
 		{4CDE13ED-0CDB-49CC-9EA4-C3B1BB7E1ED7} = {E49C8F8A-675C-4C52-917A-475FBF6F2DBC}
 		{DBB3967B-778D-490F-B233-FC0188AF68F0} = {E49C8F8A-675C-4C52-917A-475FBF6F2DBC}
+		{B28FFEEF-7BDC-4AD6-A7CB-94785BC60260} = {1639E9BF-49BB-464D-8C8A-6A5EE3DC91B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64A1E0EC-2722-4626-A270-BCD595A5D47E}

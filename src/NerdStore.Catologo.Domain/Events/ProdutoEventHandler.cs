@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace NerdStore.Catologo.Domain.Events
 {
-    public class ProductEventHandler : INotificationHandler<ProdutoAbaixoEstoqueEvent>
+    public class ProdutoEventHandler : INotificationHandler<ProdutoAbaixoEstoqueEvent>
     {
         private readonly IProdutoRepository _produtoRepository;
 
-        public ProductEventHandler(IProdutoRepository produtoRepository)
+        public ProdutoEventHandler(IProdutoRepository produtoRepository)
         {
             _produtoRepository = produtoRepository;
         }

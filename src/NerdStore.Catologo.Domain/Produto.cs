@@ -20,6 +20,8 @@ namespace NerdStore.Catologo.Domain
         public Dimensoes Dimensoes { get; private set; }
         public Categoria Categoria { get; private set; }
 
+        protected Produto() { }
+
         public Produto(string nome, string descricao, bool ativo, decimal valor, Guid categoriaId, DateTime dataCadastro, string imagem, Dimensoes dimensoes)
         {
             Nome = nome;
@@ -54,7 +56,7 @@ namespace NerdStore.Catologo.Domain
         {
             if (quantidade < 0) quantidade *= -1;
             if (!PossuiEstoque(quantidade)) throw new DomainException("Estoque insuficiente");
-            QuantidadeEstoque -= quantidade; 
+            QuantidadeEstoque -= quantidade;
         }
 
         public void ReporEstoque(int quantidade)
