@@ -8,6 +8,7 @@ namespace NerdStore.Catologo.Domain
     public interface IProdutoRepository : IRepository<Produto>
     {
         Task<IEnumerable<Produto>> ObterTodos();
+        Task<IEnumerable<Produto>> ObterTodosAtivos();
         Task<Produto> ObterPorId(Guid id);
         Task<IEnumerable<Produto>> ObterPorCategoria(int codigo);
         Task<IEnumerable<Categoria>> ObterCategorias();
