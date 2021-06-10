@@ -23,7 +23,6 @@ namespace NerdStore.Vendas.Data
         public DbSet<PedidoItem> PedidoItems { get; set; }
         public DbSet<Voucher> Vouchers { get; set; }
 
-
         public async Task<bool> Commit()
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
@@ -40,7 +39,9 @@ namespace NerdStore.Vendas.Data
             }
 
             var sucesso = await base.SaveChangesAsync() > 0;
-
+            
+            if (sucesso) await _mediatorHandler.PublicarEventos(this);
+            
             return sucesso;
         }
 
