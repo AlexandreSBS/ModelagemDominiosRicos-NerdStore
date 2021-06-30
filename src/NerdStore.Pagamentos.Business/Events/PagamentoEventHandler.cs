@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NerdStore.Pagamentos.Business.Services
 {
-    internal class PagamentoEventHandler : INotificationHandler<PedidoEstoqueConfirmadoEvent>
+    public class PagamentoEventHandler : INotificationHandler<PedidoEstoqueConfirmadoEvent>
     {
         private readonly IPagamentoService _pagamentoService;
 
