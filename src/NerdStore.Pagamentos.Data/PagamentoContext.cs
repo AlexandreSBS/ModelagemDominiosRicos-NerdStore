@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Core.Data;
-using NerdStore.Core.DomainObjects;
 using NerdStore.Core.Messages;
-using NerdStore.Pagamentos.Business;
 using NerdStore.Pagamentos.Business.Entities;
 using System;
 using System.Linq;
@@ -50,7 +48,7 @@ namespace NerdStore.Pagamentos.Data
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
-                property.Relational().ColumnType = "varchar(100)";
+                property.SetColumnType("varchar(100)");
 
             modelBuilder.Ignore<Event>();
 
