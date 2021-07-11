@@ -21,9 +21,7 @@ namespace EventSourcing
 
         public async Task<IEnumerable<StoredEvent>> ObterEventos(Guid aggregateId)
         {
-            var eventos = await _eventStoreService.GetConnection()
-                .ReadStreamEventsForwardAsync(aggregateId.ToString(), 0, 500, false);
-
+            var eventos = await _eventStoreService.GetConnection().ReadStreamEventsForwardAsync(aggregateId.ToString(), 0, 500, false);
             var listaEventos = new List<StoredEvent>();
 
             foreach (var resolvedEvent in eventos.Events)

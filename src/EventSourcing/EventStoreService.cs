@@ -1,5 +1,6 @@
 ﻿using EventStore.ClientAPI;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace EventSourcing
 {
@@ -9,12 +10,15 @@ namespace EventSourcing
 
         public EventStoreService(IConfiguration configuration)
         {
-            _connection = EventStoreConnection.Create(
-                configuration.GetConnectionString("EventStoreConnection"));
+            var consetting = ConnectionSettings.Create().DisableTls().Build();
+            _connection = EventStoreConnection.Create(consetting, new Uri("tcp://admin:changeit@localhost:1113"));
 
-            _connection.ConnectAsync();
+            _connection.ConnectAsync().Wait();
         }
 
-        public IEventStoreConnection GetConnection() => _connection;
+        public IEventStoreConnection GetConnection()
+        {
+            return _connection;
+        }
     }
 }

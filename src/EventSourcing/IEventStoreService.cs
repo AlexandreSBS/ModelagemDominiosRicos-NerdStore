@@ -2,7 +2,7 @@
 
 namespace EventSourcing
 {
-    public  interface IEventStoreService
+    public  interface IEventStoreService 
     {
         IEventStoreConnection GetConnection();
     }
